@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'style.css'%}">
+</head>
+<body>
+    <div id="header-1">
+        <a href="/">Log Out</a>
+    </div>
+    <div id="header-2">
+        <h3>Sucess! Welcome {{ user.first_name }}!</h3>
+        <p>You are sucessfully registerd (or logged in)<p>
+    </div>
+    <div id="wrapper">
+         <div id="middle-wrapper">
+            <div class='middle-box'> 
+                <h1> Add a Favorite Book</h1>
+                <form action="/add_book" method="POST">
+                    {% csrf_token %}
+                    <label for="name">Name</label>
+                    <input type="text" name="name">
+                    <label for="desc">Description</label>
+                    <input type="text" name="desc">
+                    <button type="submit" >Add</button>
+                </form> 
+            </div> 
+
+                <h2> Your Favorite Books</h2>
+                    <table border="1">
+                        <thead>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Added By</th>
+                            <th>Action</th>
+                        </thead>
+                        <tbody>
+                        {% for book in user_book %}
+                        <tr>
+                            <td><a href=/book_detail/{{book.id}}>{{ user_book.name }}</a></td>
+                            <td>{{ user_book.desc }} </td>
+                            <td>{{ user_book.user.first_name}}</td> 
+                            <td><a href="/book_edit/{{book.id}}">Edit</a> |
+                                <a href="/book_delete/{{book.id}}">Delete</a></td> 
+                            <!-- {% if user in books %}
+                                <td> <a href="/add_to_favorite/{{book.id}}">Add to Favorite</a></td> 
+                            {% endif %}
+                        {% endfor %} -->
+                        </tr>
+                        </tbody>
+                    </table>
+            <!-- </div> -->
+        </div>
+    </div>
+
+</body>
+</html>

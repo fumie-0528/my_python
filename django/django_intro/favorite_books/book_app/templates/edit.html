@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Books</title>
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'style.css'%}">
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <a href="/logout">Log Out</a>
+            <h3>Welcome {{ to_update.user.first_name }}!</h3>
+        </div>
+        <div id="middle-wrapper">
+            <div class="middle-box">
+                <h1> Edit Book</h1>
+                <form action="/book_update/{{to_update.id}}" method="POST">
+                    {% csrf_token %}
+                    <p>Name: <input name="update_name" value="{{to_update.name}}" type="text"></p>
+                        <h4> Added By: {{ to_update.user.first_name}} {{ to_update.user.last_name}}</h4>
+                        <h4> Added On: {{ to_update.created_at}}</h4>
+                        <h4> Last Update: {{ to_update.updated_at}}</h4>
+                    <p>Description:<input name="update_desc" value="{{to_update.desc}}" type="text"></p>
+                    <button type="submit" name='edit'>Update</button>
+                </form> 
+                <br>
+                <br>
+                <form action="/book_delete/{{to_update.id}}" method="POST">
+                    {% csrf_token %}
+                    <button type="submit" name='delete'>Delete this book</button>
+                </form>
+                <br>
+                <a href="/welcome">Go Back</a>
+            </div>
+            <div class="middle-box">
+                <h3>Users Who Favorited the Book</h3>
+                <ul>
+                    {% for fav in book.favorited_by.all %}
+                    <li>{{to_update.user.first_name}} {{to_update.user.last_name}}</li>
+                    {% endfor %}
+                </ul>
+                {% if user in book.favorited_by.all %}
+                <a href="/un_favorite/{{to_update.id}}">Remove From Favorites</a>
+                {% else %}
+                <a href="/add_to_favorite/{{to_update.id}}">Add to Favorites</a>
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+        

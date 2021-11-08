@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Detail</title>
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'style.css'%}">
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <a href="/">Log Out</a>
+            <!-- <h3>Sucess! Welcome {{ book.user.first_name }}!</h3> -->
+        </div>
+        <div id="body">
+            <h2>Book:{{ book.name }} </h2> 
+            <h4> Added By: {{ book.user.first_name}} {{ book.user.last_name}}</h4>
+            <h4> Added On: {{ book.created_at}}</h4>
+            <h4> Last Update: {{ book.updated_at}}</h4>
+            <h4>Description: {{ book.desc }} </h4>
+        </div>
+        <div id="footer">
+            <h2>Users who likes this book</h2>
+            {% for user in favorited_users %}
+                {{ user.first_name}}{{ user.last_name}}
+            {% endfor %}
+        </div>
+        <a href="/welcome">Go Back</a>
+    </div>
+</body>
+</html>

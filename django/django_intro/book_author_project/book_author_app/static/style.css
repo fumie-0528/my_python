@@ -1,0 +1,32 @@
+#container{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    justify-content: space-around;
+    background-color: blanchedalmond;
+}
+.box{
+    width: 400px;
+    height: 400px;
+    outline: black;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+h1{
+    color:crimson;
+}
+
+#wrapper{
+    width: 90%;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    background-color: lavender;
+    padding: 30px;
+}

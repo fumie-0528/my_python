@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'style.css'%}">
+</head>
+<body>
+    <div id="container">
+        <form action="/reset" method="POST">
+            {% csrf_token %}
+            <input type="submit" class="reset" value="Reset">
+        </form>
+        <h3>Your Gold: {{ request.session.total_gold }} </h3>
+        <div id=mid-container>
+            <div class=box>
+                <h3>Farm</h3>
+                <p>(earns 10-20 golds)</p>
+                <form action="/process_money"  method="POST">
+                    {% csrf_token %}
+                    <button type="submit" name='building' value='farm'>Find Gold!</button>
+                </form>
+                <h3>Cave</h3>
+                <p>(earns 5-10 golds)</p>
+                <form action="/process_money"  method="POST">
+                    {% csrf_token %}
+                    <button type="submit" name='building' value='cave'>Find Gold!</button>
+                </form>
+                <h3>House</h3>
+                <p>(earns 2-5 golds)</p>
+                <form action="/process_money"  method="POST">
+                    {% csrf_token %}
+                    <button type="submit" name='building' value='house'>Find Gold!</button>
+                </form>
+                <h3>Casino</h3>
+                <p>(earns 0-50 golds)</p>
+                <form action="/process_money"  method="POST">
+                    {% csrf_token %}
+                    <button type="submit" name='building' value='casino'>Find Gold!</button>
+                </form>
+            </div>
+        </div>
+
+        <div id=footer>
+            <h3>Activities:</h3>
+            <div id=log>
+                {% for log in request.session.activities reversed %}
+                    {% if "lost" in log %}
+                        <h4 class="text-danger">{{ log }}</h4>
+                    {% else %}
+                        <h4 class="text-success">{{ log }}</h4>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Detail</title>
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'style.css'%}">
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <a href="/logout">Log Out</a> |  
+            <br>
+            <br>
+            <a href="/trips">Dashboard</a>
+        </div>
+        <div id="body">
+            <h2>Destination:{{ trip.destination }} </h2> 
+            <h4>Planned By: {{ trip.planner.first_name}} {{ trip.planner.last_name}}</h4>
+            <h4>Created at: {{ trip.created_at}}</h4>
+            <h4>Plan: {{ trip.plan }} </h4>
+            <h4><a href="/trips/join/{{trip.id}}">Join this trip</a></h4>
+        </div>
+            <h2>People who've jound this trip</h2>
+            <table border="1">
+                <thead>
+                    <th>Name</th>
+                    <th>Planner</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Plan</th>
+                </thead>
+                <tbody>
+                    {% for trip in people_trips %}
+                        <tr>
+                            <td>{{ trip.destination }}</td>
+                            <td>{{ trip.planner.first_name}}</td>
+                            <td>{{ trip.date_start}}</td>
+                            <td>{{ trip.date_end}}</td>
+                            <td>{{ trip.plan}}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+
+    </div>
+</body>
+</html>

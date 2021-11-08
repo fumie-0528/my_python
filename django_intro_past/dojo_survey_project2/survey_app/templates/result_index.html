@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        {% load static %}
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+ 
+    </head>
+    <body>
+        <h3>Submitted Info</h3>
+        <p>your_name:{{ your_name }}</p>
+        <p>location:{{ location }}</p>
+        <p>favorite language:{{ favorite_language }}</p>
+        <textarea>comment:{{ comment }}</textarea>
+    </body>
+</html>

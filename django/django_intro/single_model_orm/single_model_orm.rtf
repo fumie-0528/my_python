@@ -1,0 +1,552 @@
+{\rtf1\ansi\ansicpg932\cocoartf2578
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;\f2\fnil\fcharset0 Menlo-Bold;
+\f3\fnil\fcharset0 Monaco;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red180\green36\blue25;\red159\green160\blue28;
+\red46\green174\blue187;\red47\green180\blue29;\red255\green255\blue255;\red11\green13\blue26;\red244\green0\blue95;
+\red88\green209\blue235;\red157\green101\blue255;\red95\green95\blue95;\red224\green213\blue97;}
+{\*\expandedcolortbl;;\csgray\c0;\cssrgb\c76409\c21698\c12524;\cssrgb\c68468\c68012\c14208;
+\cssrgb\c20196\c73240\c78250;\cssrgb\c20238\c73898\c14947;\cssrgb\c100000\c100000\c100000;\cssrgb\c4314\c6275\c13333;\cssrgb\c97647\c14902\c44706;
+\cssrgb\c40000\c85098\c93725;\cssrgb\c68235\c50588\c100000;\cssrgb\c44706\c44706\c44706;\cssrgb\c90196\c85882\c45490;}
+\margl1440\margr1440\vieww13200\viewh10860\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 .(=
+\f1\fs30 \cf2 \CocoaLigature0 Last login: Mon Apr 26 09:09:11 on console\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\
+The default interactive shell is now zsh.\
+To update your account to use zsh, please run `chsh -s /bin/zsh`.\
+For more details, please visit https://support.apple.com/kb/HT208050.\
+(base) Fumies-MacBook-Air:~ fumieunosawa$ pwd\
+/Users/fumieunosawa\
+(base) Fumies-MacBook-Air:~ fumieunosawa$ cd desktop\
+(base) Fumies-MacBook-Air:desktop fumieunosawa$ ls\
+assignment		python_assignment\
+practice		python_stack\
+(base) Fumies-MacBook-Air:desktop fumieunosawa$ cd python_stack\
+(base) Fumies-MacBook-Air:python_stack fumieunosawa$ ls\
+django		my_environments	python\
+(base) Fumies-MacBook-Air:python_stack fumieunosawa$ cd my_environments\
+(base) Fumies-MacBook-Air:my_environments fumieunosawa$ ls\
+djangoPy3Env	py3Env\
+(base) Fumies-MacBook-Air:my_environments fumieunosawa$ source djangoPy3Env/bin/activate\
+(djangoPy3Env) (base) Fumies-MacBook-Air:my_environments fumieunosawa$ cd ..\
+(djangoPy3Env) (base) Fumies-MacBook-Air:python_stack fumieunosawa$ ls\
+django		my_environments	python\
+(djangoPy3Env) (base) Fumies-MacBook-Air:python_stack fumieunosawa$ cd django\
+(djangoPy3Env) (base) Fumies-MacBook-Air:django fumieunosawa$ ls\
+django_fullstack	django_orm\
+django_intro		django_practice\
+(djangoPy3Env) (base) Fumies-MacBook-Air:django fumieunosawa$ cd django_intro\
+(djangoPy3Env) (base) Fumies-MacBook-Air:django_intro fumieunosawa$ django-admin startproject single_model_orm\
+(djangoPy3Env) (base) Fumies-MacBook-Air:django_intro fumieunosawa$ cd  single_model_orm\
+(djangoPy3Env) (base) Fumies-MacBook-Air:single_model_orm fumieunosawa$ python manage.py startapp user_app\
+(djangoPy3Env) (base) Fumies-MacBook-Air:single_model_orm fumieunosawa$ pwd\
+/Users/fumieunosawa/desktop/python_stack/django/django_intro/single_model_orm\
+(djangoPy3Env) (base) Fumies-MacBook-Air:single_model_orm fumieunosawa$ cd ..\
+(djangoPy3Env) (base) Fumies-MacBook-Air:django_intro fumieunosawa$ cd single_model_orm\
+(djangoPy3Env) (base) Fumies-MacBook-Air:single_model_orm fumieunosawa$ python manage.py runserver\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+\
+\cf3 You have 17 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.\cf2 \
+\cf3 Run 'python manage.py migrate' to apply them.\cf2 \
+\
+April 27, 2021 - 06:56:21\
+Django version 2.2, using settings 'single_model_orm.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+[27/Apr/2021 06:56:26] "GET / HTTP/1.1" 200 16348\
+[27/Apr/2021 06:56:26] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423\
+[27/Apr/2021 06:56:27] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876\
+[27/Apr/2021 06:56:27] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184\
+[27/Apr/2021 06:56:27] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692\
+Not Found: /favicon.ico\
+[27/Apr/2021 06:56:27] \cf4 "GET /favicon.ico HTTP/1.1" 404 1982\cf2 \
+(djangoPy3Env) (base) Fumies-MacBook-Air:single_model_orm fumieunosawa$ python manage.py makemigrations\
+Traceback (most recent call last):\
+  File "manage.py", line 21, in <module>\
+    main()\
+  File "manage.py", line 17, in main\
+    execute_from_command_line(sys.argv)\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/core/management/__init__.py", line 381, in execute_from_command_line\
+    utility.execute()\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/core/management/__init__.py", line 357, in execute\
+    django.setup()\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/__init__.py", line 24, in setup\
+    apps.populate(settings.INSTALLED_APPS)\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/apps/registry.py", line 114, in populate\
+    app_config.import_models()\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/apps/config.py", line 211, in import_models\
+    self.models_module = import_module(models_module_name)\
+  File "/opt/anaconda3/lib/python3.8/importlib/__init__.py", line 127, in import_module\
+    return _bootstrap._gcd_import(name[level:], package, level)\
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import\
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load\
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked\
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked\
+  File "<frozen importlib._bootstrap_external>", line 779, in exec_module\
+  File "<frozen importlib._bootstrap_external>", line 916, in get_code\
+  File "<frozen importlib._bootstrap_external>", line 846, in source_to_code\
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed\
+  File "/Users/fumieunosawa/Desktop/python_stack/django/django_intro/single_model_orm/user_app/models.py", line 3\
+    class User(models, Motel)\
+                            ^\
+SyntaxError: invalid syntax\
+(djangoPy3Env) (base) Fumies-MacBook-Air:single_model_orm fumieunosawa$ python manage.py makemigrations\
+Traceback (most recent call last):\
+  File "manage.py", line 21, in <module>\
+    main()\
+  File "manage.py", line 17, in main\
+    execute_from_command_line(sys.argv)\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/core/management/__init__.py", line 381, in execute_from_command_line\
+    utility.execute()\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/core/management/__init__.py", line 357, in execute\
+    django.setup()\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/__init__.py", line 24, in setup\
+    apps.populate(settings.INSTALLED_APPS)\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/apps/registry.py", line 114, in populate\
+    app_config.import_models()\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/apps/config.py", line 211, in import_models\
+    self.models_module = import_module(models_module_name)\
+  File "/opt/anaconda3/lib/python3.8/importlib/__init__.py", line 127, in import_module\
+    return _bootstrap._gcd_import(name[level:], package, level)\
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import\
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load\
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked\
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked\
+  File "<frozen importlib._bootstrap_external>", line 779, in exec_module\
+  File "<frozen importlib._bootstrap_external>", line 916, in get_code\
+  File "<frozen importlib._bootstrap_external>", line 846, in source_to_code\
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed\
+  File "/Users/fumieunosawa/Desktop/python_stack/django/django_intro/single_model_orm/user_app/models.py", line 3\
+    class User(models, Model)\
+                            ^\
+SyntaxError: invalid syntax\
+(djangoPy3Env) (base) Fumies-MacBook-Air:single_model_orm fumieunosawa$ python manage.py makemigrations\
+Traceback (most recent call last):\
+  File "manage.py", line 21, in <module>\
+    main()\
+  File "manage.py", line 17, in main\
+    execute_from_command_line(sys.argv)\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/core/management/__init__.py", line 381, in execute_from_command_line\
+    utility.execute()\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/core/management/__init__.py", line 357, in execute\
+    django.setup()\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/__init__.py", line 24, in setup\
+    apps.populate(settings.INSTALLED_APPS)\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/apps/registry.py", line 114, in populate\
+    app_config.import_models()\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/apps/config.py", line 211, in import_models\
+    self.models_module = import_module(models_module_name)\
+  File "/opt/anaconda3/lib/python3.8/importlib/__init__.py", line 127, in import_module\
+    return _bootstrap._gcd_import(name[level:], package, level)\
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import\
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load\
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked\
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked\
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module\
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed\
+  File "/Users/fumieunosawa/Desktop/python_stack/django/django_intro/single_model_orm/user_app/models.py", line 3, in <module>\
+    class User(models, Model):\
+NameError: name 'Model' is not defined\
+(djangoPy3Env) (base) Fumies-MacBook-Air:single_model_orm fumieunosawa$ python manage.py makemigrations\
+Traceback (most recent call last):\
+  File "manage.py", line 21, in <module>\
+    main()\
+  File "manage.py", line 17, in main\
+    execute_from_command_line(sys.argv)\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/core/management/__init__.py", line 381, in execute_from_command_line\
+    utility.execute()\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/core/management/__init__.py", line 375, in execute\
+    self.fetch_command(subcommand).run_from_argv(self.argv)\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/core/management/base.py", line 323, in run_from_argv\
+    self.execute(*args, **cmd_options)\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/core/management/base.py", line 361, in execute\
+    self.check()\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/core/management/base.py", line 387, in check\
+    all_issues = self._run_checks(\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/core/management/base.py", line 377, in _run_checks\
+    return checks.run_checks(**kwargs)\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/core/checks/registry.py", line 72, in run_checks\
+    new_errors = check(app_configs=app_configs)\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/core/checks/urls.py", line 13, in check_url_config\
+    return check_resolver(resolver)\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/core/checks/urls.py", line 23, in check_resolver\
+    return check_method()\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/urls/resolvers.py", line 398, in check\
+    for pattern in self.url_patterns:\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/utils/functional.py", line 80, in __get__\
+    res = instance.__dict__[self.name] = self.func(instance)\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/urls/resolvers.py", line 571, in url_patterns\
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/utils/functional.py", line 80, in __get__\
+    res = instance.__dict__[self.name] = self.func(instance)\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/urls/resolvers.py", line 564, in urlconf_module\
+    return import_module(self.urlconf_name)\
+  File "/opt/anaconda3/lib/python3.8/importlib/__init__.py", line 127, in import_module\
+    return _bootstrap._gcd_import(name[level:], package, level)\
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import\
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load\
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked\
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked\
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module\
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed\
+  File "/Users/fumieunosawa/Desktop/python_stack/django/django_intro/single_model_orm/single_model_orm/urls.py", line 20, in <module>\
+    path('', include('user_app.urls')),\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include\
+    urlconf_module = import_module(urlconf_module)\
+  File "/opt/anaconda3/lib/python3.8/importlib/__init__.py", line 127, in import_module\
+    return _bootstrap._gcd_import(name[level:], package, level)\
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import\
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load\
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked\
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked\
+  File "<frozen importlib._bootstrap_external>", line 779, in exec_module\
+  File "<frozen importlib._bootstrap_external>", line 916, in get_code\
+  File "<frozen importlib._bootstrap_external>", line 846, in source_to_code\
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed\
+  File "/Users/fumieunosawa/Desktop/python_stack/django/django_intro/single_model_orm/user_app/urls.py", line 1\
+    from django.urls import path, \
+                            ^\
+SyntaxError: trailing comma not allowed without surrounding parentheses\
+(djangoPy3Env) (base) Fumies-MacBook-Air:single_model_orm fumieunosawa$ python manage.py makemigrations\
+Traceback (most recent call last):\
+  File "manage.py", line 21, in <module>\
+    main()\
+  File "manage.py", line 17, in main\
+    execute_from_command_line(sys.argv)\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/core/management/__init__.py", line 381, in execute_from_command_line\
+    utility.execute()\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/core/management/__init__.py", line 375, in execute\
+    self.fetch_command(subcommand).run_from_argv(self.argv)\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/core/management/base.py", line 323, in run_from_argv\
+    self.execute(*args, **cmd_options)\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/core/management/base.py", line 361, in execute\
+    self.check()\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/core/management/base.py", line 387, in check\
+    all_issues = self._run_checks(\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/core/management/base.py", line 377, in _run_checks\
+    return checks.run_checks(**kwargs)\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/core/checks/registry.py", line 72, in run_checks\
+    new_errors = check(app_configs=app_configs)\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/core/checks/urls.py", line 13, in check_url_config\
+    return check_resolver(resolver)\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/core/checks/urls.py", line 23, in check_resolver\
+    return check_method()\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/urls/resolvers.py", line 398, in check\
+    for pattern in self.url_patterns:\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/utils/functional.py", line 80, in __get__\
+    res = instance.__dict__[self.name] = self.func(instance)\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/urls/resolvers.py", line 571, in url_patterns\
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/utils/functional.py", line 80, in __get__\
+    res = instance.__dict__[self.name] = self.func(instance)\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/urls/resolvers.py", line 564, in urlconf_module\
+    return import_module(self.urlconf_name)\
+  File "/opt/anaconda3/lib/python3.8/importlib/__init__.py", line 127, in import_module\
+    return _bootstrap._gcd_import(name[level:], package, level)\
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import\
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load\
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked\
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked\
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module\
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed\
+  File "/Users/fumieunosawa/Desktop/python_stack/django/django_intro/single_model_orm/single_model_orm/urls.py", line 20, in <module>\
+    path('', include('user_app.urls')),\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include\
+    urlconf_module = import_module(urlconf_module)\
+  File "/opt/anaconda3/lib/python3.8/importlib/__init__.py", line 127, in import_module\
+    return _bootstrap._gcd_import(name[level:], package, level)\
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import\
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load\
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked\
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked\
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module\
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed\
+  File "/Users/fumieunosawa/Desktop/python_stack/django/django_intro/single_model_orm/user_app/urls.py", line 1, in <module>\
+    from django.urls import render, redirect \
+ImportError: cannot import name 'render' from 'django.urls' (/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/urls/__init__.py)\
+(djangoPy3Env) (base) Fumies-MacBook-Air:single_model_orm fumieunosawa$ python manage.py makemigrations\
+Traceback (most recent call last):\
+  File "manage.py", line 21, in <module>\
+    main()\
+  File "manage.py", line 17, in main\
+    execute_from_command_line(sys.argv)\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/core/management/__init__.py", line 381, in execute_from_command_line\
+    utility.execute()\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/core/management/__init__.py", line 375, in execute\
+    self.fetch_command(subcommand).run_from_argv(self.argv)\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/core/management/base.py", line 323, in run_from_argv\
+    self.execute(*args, **cmd_options)\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/core/management/base.py", line 361, in execute\
+    self.check()\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/core/management/base.py", line 387, in check\
+    all_issues = self._run_checks(\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/core/management/base.py", line 377, in _run_checks\
+    return checks.run_checks(**kwargs)\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/core/checks/registry.py", line 72, in run_checks\
+    new_errors = check(app_configs=app_configs)\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/core/checks/urls.py", line 13, in check_url_config\
+    return check_resolver(resolver)\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/core/checks/urls.py", line 23, in check_resolver\
+    return check_method()\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/urls/resolvers.py", line 398, in check\
+    for pattern in self.url_patterns:\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/utils/functional.py", line 80, in __get__\
+    res = instance.__dict__[self.name] = self.func(instance)\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/urls/resolvers.py", line 571, in url_patterns\
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/utils/functional.py", line 80, in __get__\
+    res = instance.__dict__[self.name] = self.func(instance)\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/urls/resolvers.py", line 564, in urlconf_module\
+    return import_module(self.urlconf_name)\
+  File "/opt/anaconda3/lib/python3.8/importlib/__init__.py", line 127, in import_module\
+    return _bootstrap._gcd_import(name[level:], package, level)\
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import\
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load\
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked\
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked\
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module\
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed\
+  File "/Users/fumieunosawa/Desktop/python_stack/django/django_intro/single_model_orm/single_model_orm/urls.py", line 20, in <module>\
+    path('', include('user_app.urls')),\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include\
+    urlconf_module = import_module(urlconf_module)\
+  File "/opt/anaconda3/lib/python3.8/importlib/__init__.py", line 127, in import_module\
+    return _bootstrap._gcd_import(name[level:], package, level)\
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import\
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load\
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked\
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked\
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module\
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed\
+  File "/Users/fumieunosawa/Desktop/python_stack/django/django_intro/single_model_orm/user_app/urls.py", line 2, in <module>\
+    from . import views\
+  File "/Users/fumieunosawa/Desktop/python_stack/django/django_intro/single_model_orm/user_app/views.py", line 1, in <module>\
+    from django.shortcuts import HttpRequest\
+ImportError: cannot import name 'HttpRequest' from 'django.shortcuts' (/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/shortcuts.py)\
+(djangoPy3Env) (base) Fumies-MacBook-Air:single_model_orm fumieunosawa$ python manage.py makemigrations\
+Traceback (most recent call last):\
+  File "manage.py", line 21, in <module>\
+    main()\
+  File "manage.py", line 17, in main\
+    execute_from_command_line(sys.argv)\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/core/management/__init__.py", line 381, in execute_from_command_line\
+    utility.execute()\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/core/management/__init__.py", line 375, in execute\
+    self.fetch_command(subcommand).run_from_argv(self.argv)\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/core/management/base.py", line 323, in run_from_argv\
+    self.execute(*args, **cmd_options)\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/core/management/base.py", line 361, in execute\
+    self.check()\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/core/management/base.py", line 387, in check\
+    all_issues = self._run_checks(\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/core/management/base.py", line 377, in _run_checks\
+    return checks.run_checks(**kwargs)\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/core/checks/registry.py", line 72, in run_checks\
+    new_errors = check(app_configs=app_configs)\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/core/checks/urls.py", line 13, in check_url_config\
+    return check_resolver(resolver)\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/core/checks/urls.py", line 23, in check_resolver\
+    return check_method()\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/urls/resolvers.py", line 398, in check\
+    for pattern in self.url_patterns:\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/utils/functional.py", line 80, in __get__\
+    res = instance.__dict__[self.name] = self.func(instance)\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/urls/resolvers.py", line 571, in url_patterns\
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/utils/functional.py", line 80, in __get__\
+    res = instance.__dict__[self.name] = self.func(instance)\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/urls/resolvers.py", line 564, in urlconf_module\
+    return import_module(self.urlconf_name)\
+  File "/opt/anaconda3/lib/python3.8/importlib/__init__.py", line 127, in import_module\
+    return _bootstrap._gcd_import(name[level:], package, level)\
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import\
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load\
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked\
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked\
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module\
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed\
+  File "/Users/fumieunosawa/Desktop/python_stack/django/django_intro/single_model_orm/single_model_orm/urls.py", line 20, in <module>\
+    path('', include('user_app.urls')),\
+  File "/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/urls/conf.py", line 34, in include\
+    urlconf_module = import_module(urlconf_module)\
+  File "/opt/anaconda3/lib/python3.8/importlib/__init__.py", line 127, in import_module\
+    return _bootstrap._gcd_import(name[level:], package, level)\
+  File "<frozen importlib._bootstrap>", line 1014, in _gcd_import\
+  File "<frozen importlib._bootstrap>", line 991, in _find_and_load\
+  File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked\
+  File "<frozen importlib._bootstrap>", line 671, in _load_unlocked\
+  File "<frozen importlib._bootstrap_external>", line 783, in exec_module\
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed\
+  File "/Users/fumieunosawa/Desktop/python_stack/django/django_intro/single_model_orm/user_app/urls.py", line 2, in <module>\
+    from . import views\
+  File "/Users/fumieunosawa/Desktop/python_stack/django/django_intro/single_model_orm/user_app/views.py", line 1, in <module>\
+    from django.shortcuts import HttpReponse\
+ImportError: cannot import name 'HttpReponse' from 'django.shortcuts' (/Users/fumieunosawa/Desktop/python_stack/my_environments/djangoPy3Env/lib/python3.8/site-packages/django/shortcuts.py)\
+(djangoPy3Env) (base) Fumies-MacBook-Air:single_model_orm fumieunosawa$ python manage.py runserver\
+Watching for file changes with StatReloader\
+Performing system checks...\
+\
+System check identified no issues (0 silenced).\
+\
+\cf3 You have 17 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.\cf2 \
+\cf3 Run 'python manage.py migrate' to apply them.\cf2 \
+\
+April 27, 2021 - 07:16:22\
+Django version 2.2, using settings 'single_model_orm.settings'\
+Starting development server at http://127.0.0.1:8000/\
+Quit the server with CONTROL-C.\
+[27/Apr/2021 07:16:25] "GET / HTTP/1.1" 200 11\
+^C(djangoPy3Env) (base) Fumies-MacBook-Air:single_model_orm fumieunosawa$ \
+(djangoPy3Env) (base) Fumies-MacBook-Air:single_model_orm fumieunosawa$ python manage.py makemigrations\
+
+\f2\b \cf5 Migrations for 'user_app':
+\f1\b0 \cf2 \
+  
+\f2\b user_app/migrations/0001_initial.py
+\f1\b0 \
+    - Create model User\
+(djangoPy3Env) (base) Fumies-MacBook-Air:single_model_orm fumieunosawa$ python manage.py migrate\
+
+\f2\b \cf5 Operations to perform:
+\f1\b0 \cf2 \
+
+\f2\b   Apply all migrations: 
+\f1\b0 admin, auth, contenttypes, sessions, user_app\
+
+\f2\b \cf5 Running migrations:
+\f1\b0 \cf2 \
+  Applying contenttypes.0001_initial...
+\f2\b \cf6  OK
+\f1\b0 \cf2 \
+  Applying auth.0001_initial...
+\f2\b \cf6  OK
+\f1\b0 \cf2 \
+  Applying admin.0001_initial...
+\f2\b \cf6  OK
+\f1\b0 \cf2 \
+  Applying admin.0002_logentry_remove_auto_add...
+\f2\b \cf6  OK
+\f1\b0 \cf2 \
+  Applying admin.0003_logentry_add_action_flag_choices...
+\f2\b \cf6  OK
+\f1\b0 \cf2 \
+  Applying contenttypes.0002_remove_content_type_name...
+\f2\b \cf6  OK
+\f1\b0 \cf2 \
+  Applying auth.0002_alter_permission_name_max_length...
+\f2\b \cf6  OK
+\f1\b0 \cf2 \
+  Applying auth.0003_alter_user_email_max_length...
+\f2\b \cf6  OK
+\f1\b0 \cf2 \
+  Applying auth.0004_alter_user_username_opts...
+\f2\b \cf6  OK
+\f1\b0 \cf2 \
+  Applying auth.0005_alter_user_last_login_null...
+\f2\b \cf6  OK
+\f1\b0 \cf2 \
+  Applying auth.0006_require_contenttypes_0002...
+\f2\b \cf6  OK
+\f1\b0 \cf2 \
+  Applying auth.0007_alter_validators_add_error_messages...
+\f2\b \cf6  OK
+\f1\b0 \cf2 \
+  Applying auth.0008_alter_user_username_max_length...
+\f2\b \cf6  OK
+\f1\b0 \cf2 \
+  Applying auth.0009_alter_user_last_name_max_length...
+\f2\b \cf6  OK
+\f1\b0 \cf2 \
+  Applying auth.0010_alter_group_name_max_length...
+\f2\b \cf6  OK
+\f1\b0 \cf2 \
+  Applying auth.0011_update_proxy_permissions...
+\f2\b \cf6  OK
+\f1\b0 \cf2 \
+  Applying sessions.0001_initial...
+\f2\b \cf6  OK
+\f1\b0 \cf2 \
+  Applying user_app.0001_initial...
+\f2\b \cf6  OK
+\f1\b0 \cf2 \
+(djangoPy3Env) (base) Fumies-MacBook-Air:single_model_orm fumieunosawa$ python manage.py shell\
+Python 3.8.5 (default, Sep  4 2020, 02:22:02) \
+[Clang 10.0.0 ] on darwin\
+Type "help", "copyright", "credits" or "license" for more information.\
+(InteractiveConsole)\
+>>> user1=User.objects.create(first_name="Jun", last_name="Koike", email_address="jun_koike@yahoo.com", age=26)\
+Traceback (most recent call last):\
+  File "<console>", line 1, in <module>\
+NameError: name 'User' is not defined\
+>>> user1=User.objects.create(first_name="Jun", last_name="Koike", email_address="jun_koike@yahoo.com", age=26)\
+Traceback (most recent call last):\
+  File "<console>", line 1, in <module>\
+NameError: name 'User' is not defined\
+>>> from user_app.models import*\
+>>> user1=User.objects.create(first_name="Jun", last_name="Koike", email_address="jun_koike@yahoo.com", age=26)\
+>>> user2=User.objects.create(first_name="Jun", last_name="Koike", email_address="jun_koike@yahoo.com", age=26)\
+>>> user2=User.objects.get(id=2)\
+>>> user2.delete()\
+(1, \{'user_app.User': 1\})\
+>>> user2=User.objects.create(first_name="Yuki", last_name="Smith", email_address"yuki_smith@gmail.com", age=35)\
+  File "<console>", line 1\
+    user2=User.objects.create(first_name="Yuki", last_name="Smith", email_address"yuki_smith@gmail.com", age=35)\
+                                                                                 ^\
+SyntaxError: invalid syntax\
+>>> user2=User.objects.create(first_name="Yuki", last_name="Smith", email_address"yuki_smith=@gmail.com", age=35)\
+  File "<console>", line 1\
+    user2=User.objects.create(first_name="Yuki", last_name="Smith", email_address"yuki_smith=@gmail.com", age=35)\
+                                                                                 ^\
+SyntaxError: invalid syntax\
+>>> user2=User.objects.create(first_name="Yuki", last_name="Smith", email_address="yuki_smith@gmail.com", age=35)\
+>>> user3=User.objects.create(first_name="Elly", last_name="Sakai", email_address="elly8226@gmail.com", age=15)\
+>>> User.objects.all()\
+<QuerySet [<User: User object (1)>, <User: User object (3)>, <User: User object (4)>]>\
+>>> User.objects.get(id=4)\
+<User: User object (4)>\
+>>> User.objects.get(id=4)\
+<User: User object (4)>\
+>>> user3.last_name="Pancake"\
+>>> user3.save()\
+>>> User.objects.get(id=3)\
+<User: User object (3)>\
+>>> user2.delete()\
+(1, \{'user_app.User': 1\})\
+>>> User.objects.all()order_by("last_name")\
+  File "<console>", line 1\
+    User.objects.all()order_by("last_name")\
+                      ^\
+SyntaxError: invalid syntax\
+>>> UserUser.objects.all().order_by("last_name")\
+Traceback (most recent call last):\
+  File "<console>", line 1, in <module>\
+NameError: name 'UserUser' is not defined\
+>>> User.objects.all().order_by("last_name")\
+<QuerySet [<User: User object (1)>, <User: User object (4)>]>\
+>>> User.objects.all().order_by(-"first_name")\
+Traceback (most recent call last):\
+  File "<console>", line 1, in <module>\
+TypeError: bad operand type for unary -: 'str'\
+>>> User.objects.all().order_by("-first_name")\
+<QuerySet [<User: User object (1)>, <User: User object (4)>]>\
+>>> \
+\
+\
+\
+\pard\pardeftab720\sl340\partightenfactor0
+
+\f3\fs25\fsmilli12600 \cf7 \cb8 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \outl0\strokewidth0 \strokec7 this_author \cf9 \strokec9 =\cf7 \strokec7  Author.\cf10 \strokec10 object\cf7 \strokec7 s.\cf10 \strokec10 get\cf7 \strokec7 (id\cf9 \strokec9 =\cf11 \strokec11 2\cf7 \strokec7 )	\cf12 \strokec12 # get an instance of an Author\cf7 \strokec7 \
+my_book \cf9 \strokec9 =\cf7 \strokec7  Book.\cf10 \strokec10 object\cf7 \strokec7 s.\cf10 \strokec10 create\cf7 \strokec7 (title\cf9 \strokec9 =\cf13 \strokec13 "Little Women"\cf7 \strokec7 , author\cf9 \strokec9 =\cf7 \strokec7 this_author)	\cf12 \strokec12 # set the retrieved author as the author of a new book\cf7 \strokec7 \
+    \
+\cf12 \strokec12 # or in one line...\cf7 \strokec7 \
+my_book \cf9 \strokec9 =\cf7 \strokec7  Book.\cf10 \strokec10 object\cf7 \strokec7 s.\cf10 \strokec10 create\cf7 \strokec7 (title\cf9 \strokec9 =\cf13 \strokec13 "Little Women"\cf7 \strokec7 , author\cf9 \strokec9 =\cf7 \strokec7 Author.\cf10 \strokec10 object\cf7 \strokec7 s.\cf10 \strokec10 get\cf7 \strokec7 (id\cf9 \strokec9 =\cf11 \strokec11 2\cf7 \strokec7 ))\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs30 \cf2 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 \
+}

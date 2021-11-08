@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Detail</title>
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'style.css'%}">
+</head>
+<body>
+    <div id="wrapper">
+        <h2>{{ book.title }} </h2>
+        <h3> ID: {{ book.id }} </h3>  
+        <h4> Description: {{ book.description}} </h4>
+
+        <br>
+        <br>
+        {% for author in book.authors.all %}
+        <h4>Authors </h4>
+        <li>{{ author.first_name }} {{ author.last_name }}</li>
+        {% endfor %}
+        <select name="authors">
+            {% for author in authors %}
+                {% if author not in book.authors.all %}
+            <option value="{{ author.id }}">{{ author.first_name }}{{ author.last_name }}</option>
+                {% endif %}
+            {% endfor %}
+        </select><br>
+    </div>
+</body>
+</html>

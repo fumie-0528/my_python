@@ -1,0 +1,15 @@
+#wrapper{
+    width: 970px;
+    height:auto;
+    margin:0px auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    /* outline: black; */
+    background-color: purple;
+}
+input{
+    width: 80%;
+    margin:20px;
+} 
+

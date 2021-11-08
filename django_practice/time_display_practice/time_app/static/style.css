@@ -1,0 +1,18 @@
+
+.container{
+    width:90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h3{
+    color: red;
+}
+
+.time-container{
+    outline-color: black;
+    width: 600px;
+    height: 300px;
+}

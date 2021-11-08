@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Trips</title>
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'style.css'%}">
+</head>
+<body>
+    <div id="wrapper">
+        <a href="/logout">Log Out</a>
+        <div id="header">
+            <h1> Hello, {{user.first_name}}! </h1>
+          
+        </div>
+        <div id="middle-wrapper">
+            <h3> Edit Trip</h3>
+            <form action="/trips/update/{{to_update.id}}" method="POST">
+                {% csrf_token %}
+                <p>Destination: <input name="update_destination" value="{{to_update.destination}}" type="text"></p>
+                <p>Plan: <input name="update_plan" value="{{to_update.plan}}" type="text"></p>
+                <p>Start Date: <input name="update_date_start" value="{{to_update.date_start|date:'Y-m-d'}}" type="date"></p>
+                <p>End Date: <input name="update_date_end" value="{{to_update.date_end|date:'Y-m-d'}}" type="date"></p>
+                <button type="submit" name='edit'>Update</button>
+            </form> 
+        </div>
+        <a href="/trips/delete/{{to_update.id}}">Delete this trip</a>
+    </div>
+</body>
+</html>
+        
